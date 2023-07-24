@@ -7,10 +7,91 @@
     <!-- DaisyUI & Tailwind css cdn link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font awesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .gray-text{
+        color: #707070;
+    }
+    .poppins{
+        font-family: 'Poppins', sans-serif;
+    }
+    .ebgaramond{
+        font-family: 'EB Garamond', serif;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <nav></nav>
+    <header class="container mx-auto">
+        <nav class="py-3"><div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Home</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Cases</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+              </div>
+              <img src="./images/logo2.png" alt="">
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 gray-text">
+                <li><a>Home</a></li>
+                <li><a>Services <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a>Cases <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a>Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a>Contact Us <i class="fa-solid fa-chevron-right"></i></a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn bg-[#B68C5A] text-white hover:bg-[#707070]">Free Consultation</a>
+            </div>
+          </div>
+        </nav>
+        <div class="bg-[url('./images/banner.png')] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center py-32 px-5 space-y-8 text-center poppins">
+            <h1 class="text-white text-7xl font-extrabold ebgaramond">We Provide Effective <br> Legal Solutions</h1>
+            <p class="text-[#E7E7E7] font-normal">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration in some form, by injected humour.</p>
+            <div class="join">
+                <input class="input  rounded-md lg:w-[500px] placeholder:text-[#707070]" placeholder="Search your services"/>
+                <button class="btn bg-[#B68C5A] text-white border-none hover:bg-[#707070] rounded-md ml-6 poppins">Subscribe</button>
+              </div>
+
+        </div>
     </header>
+    <main class="mt-32 container mx-auto">
+        <!-- the legal practice area -->
+        <section class="mb-32">
+            <h1 class="text-[#414040] text-4xl mb-6 text-center font-extrabold ebgaramond">The Legal Practice Area</h1>
+            <p class="font-normal leading-7 text-center poppins mb-16">There are many variations of passages of Lorem Ipsum available, but the majority have <br> suffered alteration in some form, by injected humour.</p>
+            <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- card -->
+                    <div class="card rounded-none border-[#E7E7E7] border-l-0 border-t-0 border">
+                        <figure class="px-10 pt-10">
+                          <img src="/images/business.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center space-y-7">
+                          <h2 class="card-title text-3xl font-extrabold ebgaramond text-[#414040]">Business Law</h2>
+                          <p class="poppins font-normal leading-6 px-12">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                          <i class="fa-solid fa-arrow-right rounded-full text-xl px-2 py-1 text-white bg-[#B68C5A]"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
